@@ -1,1 +1,36 @@
-<p>canvas-page works!</p>
+<section class="canvas-page">
+
+  <div class="canvas-container">
+    @for (pixel of pixels; track $index) {
+      <div
+        class="pixel-div"
+        [style.background]="pixel.color"
+        (click)="paintPixel($index)">
+      </div>
+    }
+  </div>
+
+  <aside class="tools-panel">
+    <h3>Paleta de cores</h3>
+    <div class="colors">
+      <!-- botões de cores -->
+      <button class="color-btn" style="background:#222222"></button>
+      <button class="color-btn" style="background:#a82a2a"></button>
+      <button class="color-btn" style="background:#e79427"></button>
+      <button class="color-btn" style="background:#70b422"></button>
+      <button class="color-btn" style="background:#1b9ac0"></button>
+      <button class="color-btn" style="background:#3543bd"></button>
+      <button class="color-btn" style="background:#75329c"></button>
+      <button class="color-btn" style="background:#af2a68"></button>
+      <button class="color-btn" style="background:#bdbdbd"></button>
+      <input (input)="getColor($event)" class="color-input" type="color">
+    </div>
+
+    <h3>Ferramentas</h3>
+    <div class="tools">
+      <button>Pincel</button>
+      <button>Borracha</button>
+      <button>Limpar</button>
+    </div>
+  </aside>
+</section>

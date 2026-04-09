@@ -1,1 +1,28 @@
-<p>login-page works!</p>
+<section class="login-container">
+
+  <main>
+    
+    <!-- TELA DE LOGIN -->
+    <div *ngIf="!isRegister">
+      <h2>Login</h2>
+
+      <input type="text" placeholder="Email">
+      <input type="password" placeholder="Senha">
+
+      <button>Entrar</button>
+      <button (click)="isRegister = true">Registrar</button>
+    </div>
+
+    <!-- TELA DE REGISTRO -->
+    <div *ngIf="isRegister">
+      <h2>Criar Conta</h2>
+
+      <app-register-form></app-register-form>
+
+      <button (click)="isRegister = false">
+        Voltar para login
+      </button>
+    </div>
+
+  </main>
+</section>

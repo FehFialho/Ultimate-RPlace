@@ -1,0 +1,49 @@
+/* Container herda estilo do card do LoginPage */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Labels */
+.container label {
+  font-size: 0.9rem;
+  color: #a8c1b5;
+}
+
+/* Inputs */
+.container input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #243d33;
+  color: #e8f5ee;
+  outline: none;
+  transition: 0.2s;
+}
+
+.container input::placeholder {
+  color: #a8c1b5;
+}
+
+.container input:focus {
+  background: #2f5d50;
+}
+
+/* Botão Enviar */
+.send-form {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2f5d50;
+  color: #e8f5ee;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 8px;
+}
+
+.send-form:hover {
+  background: #4c8c74;
+}
