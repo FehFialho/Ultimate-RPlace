@@ -1,5 +1,7 @@
 .pixel-div {
   background-color: whitesmoke;
+  height: 30px;
+  width: 30px;
   /* border: .6px solid #ddd; */
 }
 
@@ -17,9 +19,9 @@
   flex: 2; /* 2/3 da largura */
   padding: 32px;
   display: grid;
-  grid-template-columns: repeat(26, 50px); /* 16 colunas */
-  grid-template-rows: repeat(16, 50px);    /* 16 linhas */
-  gap: 2px; /* espaçamento entre pixels */
+  grid-template-columns: repeat(40, 30px); /* colunas */
+  grid-template-rows: repeat(36, 30px);    /* linhas */
+  gap: 1px; /* espaçamento entre pixels */
   justify-content: center;
 }
 

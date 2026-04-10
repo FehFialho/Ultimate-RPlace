@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Api } from "./api";
-import { LoginDto } from "./UserInterface";
+import { LoginDto } from "./interfaces/UserInterface";
 import { Observable } from "rxjs";
 
 @Injectable({

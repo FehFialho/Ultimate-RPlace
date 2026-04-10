@@ -1,12 +1,14 @@
 <section class="canvas-page">
 
   <div class="canvas-container">
-    @for (pixel of pixels; track $index) {
-      <div
-        class="pixel-div"
-        [style.background]="pixel.color"
-        (click)="paintPixel($index)">
-      </div>
+    @for (row of pixels; track $index; let y = $index) {
+      @for (pixel of row; track $index; let x = $index) {
+        <div
+          class="pixel-div"
+          [style.background]="pixel.color"
+          (click)="paintPixel(x,y)"
+        ></div>
+      }
     }
   </div>
 
@@ -30,7 +32,7 @@
     <div class="tools">
       <button>Pincel</button>
       <button>Borracha</button>
-      <button>Limpar</button>
+      <button onclick="cleanCanvas()">Limpar</button>
     </div>
   </aside>
 </section>

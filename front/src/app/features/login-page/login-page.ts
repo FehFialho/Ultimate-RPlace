@@ -5,14 +5,14 @@ import { RegisterForm } from './register-form/register-form';
 import { LoginForm } from './login-form/login-form';
 import { CommonModule } from '@angular/common';
 import { AuthApi } from '../../domain/auth.api';
-import { LoginDto } from '../../domain/UserInterface';
+import { LoginDto } from '../../domain/interfaces/UserInterface';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
   templateUrl: './login-page.html',
   styleUrls: ['./login-page.css'],
-  imports: [RouterOutlet, FormsModule, CommonModule, RegisterForm, LoginForm, ReactiveFormsModule]
+  imports: [FormsModule, CommonModule, ReactiveFormsModule]
 })
 export class LoginPage {
   isSubscribe = false;
