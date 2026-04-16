@@ -5,6 +5,9 @@ export const authGuardGuard: CanMatchFn = (route, segments) => {
 
   const router = inject(Router)
 
+  const token = sessionStorage.getItem('token') ?? "";
+  const logged = "" !== token;
+
   if(!sessionStorage.getItem('token'))
     router.navigate(["login"])
     return false;
